@@ -1,0 +1,244 @@
+<?xml version="1.0"?>
+<config>
+  <tabs>
+    <fulfillment translate="label" module="fulfillment">
+      <label>Fullfilment FTP info</label>
+      <sort_order>506</sort_order>
+    </fulfillment>
+  </tabs>
+  <sections>
+    <fulfillment translate="label" module="fulfillment">
+      <label>Fulfillment Server Info</label>
+      <sort_order>10</sort_order>
+      <tab>fulfillment</tab>
+      <show_in_default>1</show_in_default>
+      <show_in_website>1</show_in_website>
+      <show_in_store>1</show_in_store>
+      <groups>
+
+        <email_contact translate="label" module="fulfillment">
+          <label>Email Settings</label>
+          <sort_order>5</sort_order>
+          <show_in_default>1</show_in_default>
+          <show_in_website>1</show_in_website>
+          <show_in_store>1</show_in_store>
+          <fields>
+            <emailaddress translate="label" module="fulfillment">
+              <label>Email Address</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>10</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+              <depends>
+                <use_email>1</use_email>
+              </depends>
+            </emailaddress>
+            <use_email translate="label" module="fulfillment">
+              <label>Use Email</label>
+              <frontend_type>select</frontend_type>
+              <source_model>fulfillment/system_config_source_show</source_model>
+              <sort_order>20</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </use_email>
+          </fields>
+        </email_contact>
+        
+        <ftpgeneral translate="label" module="fulfillment">
+          <label>FTP Settings</label>
+          <sort_order>10</sort_order>
+          <show_in_default>1</show_in_default>
+          <show_in_website>1</show_in_website>
+          <show_in_store>1</show_in_store>
+          <fields>
+            <ftpserver translate="label" module="fulfillment">
+              <label>FTP Server</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>10</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+              <depends>
+                <show_ftp>1</show_ftp>
+              </depends>
+            </ftpserver>
+            <ftpuser translate="label" module="fulfillment">
+              <label>FTP user</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>11</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+              <depends>
+                <show_ftp>1</show_ftp>
+              </depends>
+            </ftpuser>
+            <ftppass translate="label" module="fulfillment">
+              <label>FTP Password</label>
+              <frontend_type>password</frontend_type>
+              <sort_order>12</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+              <depends>
+                <show_ftp>1</show_ftp>
+              </depends>
+            </ftppass>
+            <show_ftp translate="label" module="fulfillment">
+              <label>Use FTP</label>
+              <frontend_type>select</frontend_type>
+              <source_model>fulfillment/system_config_source_show</source_model>
+              <sort_order>20</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </show_ftp>
+          </fields>
+        </ftpgeneral>
+        <apigeneral translate="label" module="fulfillment">
+          <label>XML API Settings</label>
+          <sort_order>10</sort_order>
+          <show_in_default>1</show_in_default>
+          <show_in_website>1</show_in_website>
+          <show_in_store>1</show_in_store>
+          <fields>
+            <apiaddress translate="label" module="fulfillment">
+              <label>API Address</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>9</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+              <depends>
+                <show_xmlapi>1</show_xmlapi>
+              </depends>
+              <depends>
+                <use_production_api>1</use_production_api>
+              </depends>
+            </apiaddress>
+
+            <apiaddress_dev translate="label" module="fulfillment">
+              <label>Development API Address</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>9</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+              <depends>
+                <show_xmlapi>1</show_xmlapi>
+              </depends>
+              <depends>
+                <use_production_api>0</use_production_api>
+              </depends>
+            </apiaddress_dev>
+            
+            <xmltoken translate="label" module="fulfillment">
+              <label>Server Token</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>10</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+              <depends>
+                <show_xmlapi>1</show_xmlapi>
+              </depends>
+            </xmltoken>
+            <serveruser translate="label" module="fulfillment">
+              <label>Server user</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>11</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+              <depends>
+                <show_xmlapi>1</show_xmlapi>
+              </depends>
+            </serveruser>
+            <serverpass translate="label" module="fulfillment">
+              <label>Server Password</label>
+              <frontend_type>password</frontend_type>
+              <sort_order>12</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+              <depends>
+                <show_xmlapi>1</show_xmlapi>
+              </depends>
+            </serverpass>
+            <apiuser translate="label" module="fulfillment">
+              <label>API Server user</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>13</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+              <depends>
+                <show_xmlapi>1</show_xmlapi>
+              </depends>
+            </apiuser>
+            <apipass translate="label" module="fulfillment">
+              <label>API User Password</label>
+              <frontend_type>password</frontend_type>
+              <sort_order>14</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+              <depends>
+                <show_xmlapi>1</show_xmlapi>
+              </depends>
+            </apipass>
+
+            <apicode translate="label" module="fulfillment">
+              <label>API Campaign Code</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>15</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+              <depends>
+                <show_xmlapi>1</show_xmlapi>
+              </depends>
+            </apicode>
+            <apidnis translate="label" module="fulfillment">
+              <label>API DNIS</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>16</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+              <depends>
+                <show_xmlapi>1</show_xmlapi>
+              </depends>
+            </apidnis>
+
+            <use_production_api translate="label" module="fulfillment">
+              <label>Use Production API</label>
+              <frontend_type>select</frontend_type>
+              <source_model>fulfillment/system_config_source_show</source_model>
+              <sort_order>20</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+              <depends>
+                <show_xmlapi>1</show_xmlapi>
+              </depends>
+            </use_production_api>
+            
+            <show_xmlapi translate="label" module="fulfillment">
+              <label>Use XML API</label>
+              <frontend_type>select</frontend_type>
+              <source_model>fulfillment/system_config_source_show</source_model>
+              <sort_order>20</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </show_xmlapi>
+          </fields>
+        </apigeneral>
+      </groups>
+    </fulfillment>
+
+  </sections>
+</config>

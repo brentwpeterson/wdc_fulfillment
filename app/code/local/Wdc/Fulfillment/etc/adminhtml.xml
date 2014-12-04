@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <!-- Add adminhtml menu entry under the Catalog section -->
+    <menu>
+        <fulfillment translate="title" module="adminhtml">
+            <title>Fulfillment</title>
+            <sort_order>10</sort_order>
+            <children>
+                <!--
+                <fulfillment translate="title" module="fulfillment">
+                    <title>Run Cron Manually</title>
+                    <action>adminhtml/ftp/sendorders</action>
+                    <sort_order>250</sort_order>
+                </fulfillment>
+
+                <ftp translate="title" module="fulfillment">
+                    <title>Upload orders</title>
+                    <action>adminhtml/ftp/upload</action>
+                    <sort_order>300</sort_order>
+                </ftp>
+
+                <report translate="title" module="fulfillment">
+                    <title>Run Report</title>
+                    <action>adminhtml/reports/review</action>
+                    <sort_order>300</sort_order>
+                </report>
+                <orders translate="title" module="fulfillment">
+                    <title>New Orders Download</title>
+                    <action>adminhtml/reports/orders</action>
+                    <sort_order>310</sort_order>
+                </orders>-->
+            </children>
+        </fulfillment>
+    </menu>
+    <!-- Add ACL Settings unter System > Permissons > Roles -->
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <catalog>
+                        <children>
+                            <fulfillment translate="title" module="fulfillment">
+                                <title>Manage Fulfillment Section</title>
+                            </fulfillment>
+                        </children>
+                    </catalog>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <fulfillment translate="title" module="fulfillment">
+                                        <title>Fulfillment Configuration</title>
+                                    </fulfillment>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>
